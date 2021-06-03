@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    background-color: aqua;
+    
+}
+.containerHeader{
+    display: flex;
+    background-color: antiquewhite;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.containerHeader img{
+    width: 50px;
+    height: 50px;
+   margin-left: 5em;
+   margin-right: 5em;
+}
+.containerHeader img{
+font-size: 16px;
+line-height: 18.75px;
+
+
+}
+.container form {
+    margin: auto;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+}
+.container form input{
+    margin: 1em auto;
+    width: 30%;
+    height: 40px;
+    padding-left: 2em;
+    
+}
+.container form input::placeholder{
+    font-size: 16px;
+
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/shared/Header";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import routes from "./routes/Routes";
+import AppProvider from "./AppProvider";
+// import AppProvider from './AppProviderTSX';
+// import AppProvider from "./AppProvider";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            {routes.map((route) => (
+              <Route
+                // Key= {route.path}
+                exact
+                path={route.path}
+                component={route.component}
+              />
+            ))}
+          </Switch>
+        </Router>
+      </AppProvider>
     </div>
   );
 }
-
 export default App;
